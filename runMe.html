@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <!-- required to run plotly.js  -->
+	</head>
+	<body>
+		<script src="js/read_files.js"></script>
+		<div id="form_id" style="width=100px;float:left;margin-left:700px;margin-top:5px;background-color:gray">
+			<form>
+				<select name="sample_id_select" class="selectpicker form-control">
+					<option type="text" value="all">All Cells</option>
+					<option type="text" value="glia">Progenitor Cells</option>
+					<option type="text" value="neuron">Neuronal Cells</option>
+				</select>
+				<input type="text" name ="gene_name" id="gene_id" /> 
+			<div id="submit_button">
+				<input type="button" name="button" value="Submit" onclick="processFormData(this.form);"/>
+			</div>
+			</form>
+		</div>
+		
+		<div id="my_figure" style="width=600px;height:520px;float:left;margin-left:200px;margin-top:20px;background-color:white">
+		<div id="myDiv1" style="width:600px;height:500px;float:left;margin:10px;background-color:white"></div>
+		<div id="myDiv3" style="width:600px;height:500px;float:right;margin:10px;background-color:white"></div>
+		</div>
+		<div id="myDiv2" style="width:1200px;height:600px;float:left;margin-left:200px;background-color:white"></div>	
+		<script src="js/plot_genes.js"></script>
+		
+	</body>
+</html>
